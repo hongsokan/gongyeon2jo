@@ -12,7 +12,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class SampleService {
 
-    final private SampleRepository sampleRepository;
+    final SampleRepository sampleRepository;
 
     public List<Sample> getSampleList() {
         return sampleRepository.findAll();
