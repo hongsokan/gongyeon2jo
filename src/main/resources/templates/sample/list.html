@@ -14,10 +14,13 @@
     <tr th:each="sample: ${list}">
         <td th:text="${sample.sampleId}"></td>
         <td th:text="${sample.sampleName}"></td>
-        <td><a th:href="@{/sample/{uid}(uid=${sample.sampleId})}" th:text="${sample.sampleName}"></a></td>
+        <td><a th:href="@{/sample/{uid}(uid=${sample.sampleId})}">상세보기</a></td>
     </tr>
 </table>
 
-<button>샘플 등록</button>
+<form action="/sample" method="post">
+    <input type="text" name="sampleName"/>
+    <button type="submit">샘플 등록</button>
+</form>
 </body>
 </html>

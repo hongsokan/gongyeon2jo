@@ -22,4 +22,13 @@ public class SampleService {
         return sampleRepository.findBySampleId(sampleId);
     }
 
+    public void insert(Sample sample) {
+        sampleRepository.save(sample);
+    }
+
+
+
+    public void deleteBySampleId(int sampleId) {
+        sampleRepository.deleteBySampleId(sampleId);
+    }
 }
