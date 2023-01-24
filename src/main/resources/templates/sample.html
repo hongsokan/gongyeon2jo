@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sample</title>
+</head>
+<body>
+<table>
+    <th>테이블 목록</th>
+    <tr>
+        <th>sampleId</th>
+        <th>sampleName</th>
+    </tr>
+    <tr th:each="sample: ${list}">
+        <td th:text="${sample.sampleId}"></td>
+        <td th:text="${sample.sampleName}"></td>
+        <td><a th:href="@{/sample/{uid}(uid=${sample.sampleId})}" th:text="${sample.sampleName}"></a></td>
+    </tr>
+</table>
+
+<button>샘플 등록</button>
+</body>
+</html>
